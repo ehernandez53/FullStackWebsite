@@ -1,5 +1,3 @@
-// This form will help with initializing everything needed
-
 (function (window) {
     'use strict';
     var FORM_SELECTOR = '[data-critique="form"]';
@@ -20,9 +18,6 @@
     var formHandler = new FormHandler(FORM_SELECTOR);
     formHandler.addSubmitHandler(function(data) {
         return critique.createCritique.call(critique, data)
-            .then( function() { 
-                alert('Server unreachable. Try again later.');
-            });
     });
 
     critique.printCritiques(comment.addRow.bind(comment));

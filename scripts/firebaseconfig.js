@@ -14,7 +14,6 @@
 
     App.FirebaseConfig = FirebaseConfig;
 
-    // Initialize Firebase
     firebase.initializeApp(App.FirebaseConfig);
     window.App = App;
 })(window);

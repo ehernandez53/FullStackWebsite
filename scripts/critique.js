@@ -9,7 +9,6 @@
         }
         createCritique(critique) {
             'use strict';
-            console.log('Adding critique');
             return this.db.add(critique.description, critique);
         }
         printCritiques(printFn) {
@@ -17,10 +16,8 @@
             return this.db.getAll()
                 .then(function (critiques) {
                     var critiqueIdArray = Object.keys(critiques);
-                    console.log('There are critiques:');
-                    critiqueIdArray.forEach(function (id) {
-                        console.log(critiques[id]);
-                        if (printFn) {
+                        critiqueIdArray.forEach(function (id) {
+                         if (printFn) {
                             printFn(critiques[id]);
                         }
                     }.bind(this));

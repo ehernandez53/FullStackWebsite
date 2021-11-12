@@ -1,5 +1,3 @@
-// This file might be useful for connecting to the database
-
 (function (window) {
     'use strict';
     var App = window.App || {};
@@ -16,13 +14,11 @@
 
     class firebasedatastore {
         constructor() {
-            console.log('Running the firebasedatastore function');
             firebase.initializeApp(FirebaseConfig);
             this.db = firebase.firestore();
         }
 
         async add(key, val) {
-            console.log('firebase add ');
             const docRef = this.db.doc(`barharbor/${this.makeDocHash(20)}`);
             return docRef.set(val);
         }

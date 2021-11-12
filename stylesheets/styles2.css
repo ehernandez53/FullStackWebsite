@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 body {
@@ -24,15 +24,15 @@ a:visited {
 a:hover, a:active, a:focus {
 	text-decoration: none;
 }
-button, label, textarea {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-size: 13pt;
+button, input, label, textarea {
+	font-family: 'Merriweather', serif;
+	font-size: 11pt;
 }
 header {
 	display: flex;
-	flex: 0 0 auto;
+	flex: 1 0 auto;
 	height: 100px;
-	font-size: 32px;
+	font-size: 32pt;
 	background-image: url(/~cs349s12/images/layout/header-footer.png);
 	background-repeat: repeat;
 	background-color: #0C0C1E;
@@ -48,7 +48,7 @@ footer {
 }
 
 .buttons-header {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Merriweather', serif;
 	height: 60px;
 	margin-left: 16%;
 	display: flex;
@@ -57,26 +57,93 @@ footer {
 	justify-content: flex-start;
 	align-items: center;
 }
+.comment-section {
+	flex: 1;
+	font-family: 'Merriweather', serif;
+}
+.comment-section p {
+	width: 100%;
+}
+.content {
+	display: flex;
+	width: 85%;
+	column-gap: 5%;
+	margin-left: 15%;
+	margin-top: 2%;
+}
+.dropbtn {
+	font-family: 'Lobster Two', cursive;
+	font-size: 32pt;
+	color: #F3E3E2;
+	background-color: #74112F;
+	height: 70px;
+	padding: 0px 30px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #F3E3E2;
+	width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+.dropdown-content a {
+	color: #74112F;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown-content a:hover {
+	background-color: #74112F;
+	color: #F3E3E2;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+.dropdown:hover {
+	background-color: #F3E3E2;
+	color: #74112F;
+	border-radius: 12px;
+}
 .form-control {
-	height: 75px;
+	font-size: 11pt;
+}
+.modal {
+	height: 6%;
+}
+.modal a {
+	color: #0C0C1E;
 }
 .panel-body {
-	width: 30%;
-	margin-left: 35%;
-	justify-content: center;
-	margin-bottom: 2%;
+	width: 100%;
+}
+.panel panel-primary {
+	flex: 1;
 }
 
+#addModal {
+	color: #0C0C1E;
+}
 #blurb {
 	color: #F3E3E2;
 	margin-left: 25px;
 	margin-top: 19px;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Merriweather', serif;
 	font-style: italic;
-	font-size: 13pt;
+	font-size: 11pt;
 	position: absolute;
 }
 #button-header {
+	font-family: 'Lobster Two', cursive;
 	border: none;
 	height: 70px;
 	color: #F3E3E2;
@@ -84,14 +151,15 @@ footer {
 	padding: 0px 30px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 32px;
+	font-size: 32pt;
+	border-radius: 8px;
 	cursor: pointer;
 }
 #copyright {
 	color: #F3E3E2;
 	margin-left: 25px;
 	margin-top: 101px;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: 'Merriweather', serif;
 	font-style: italic;
 	font-size: 10pt;
 	position: absolute;
@@ -105,11 +173,4 @@ footer {
 	position: absolute;
 	width: 100%;
 	margin-top: 19px;
-}
-#work {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	margin-top: 2%;
 }

@@ -25,7 +25,8 @@
             var $div = $('<div></div>');
             var $label = $('<label></label>');
 
-            var comment = '<p>' + critique.description + '<br/>';
+	    var comment = '<p>' + critique.name + " said:" + '<br/>';
+            comment += critique.description + '<br/>';
             comment += critique.reaction + '<br/>';
             if (critique.use_line != "") {
                 comment += critique.use_line + '<br/>';
@@ -56,7 +57,6 @@
                 comment += '</p>'
             }
             
-            console.log("comment: " + comment);
             $label.append(comment);
             $div.append($label);
             this.$element = $div;
